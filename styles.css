@@ -33,7 +33,7 @@ header a:hover {
 }
 
 .language-selector select {
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1.5rem 0.5rem 0.5rem;
     border: 1px solid #ffffff;
     border-radius: 5px;
     background-color: #3A1E68;
