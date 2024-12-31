@@ -67,7 +67,7 @@ header a:hover {
 }
 
 .language-selector option[value="pt"]::before {
-    content: url('path-to-portuguese-flag.png');
+    content: url(PT.jpg);
 }
 
 .container {
