@@ -22,7 +22,7 @@ header a {
 }
 
 header a:hover {
-    color: #93C5FD;
+    color: #FFD700; /* Alterado para dourado */
 }
 
 .container {
