@@ -19,13 +19,17 @@
     <header>
         <div><a href="#">Pawly</a></div>
         <nav>
-            <button onclick="switchLanguage('en')">English</button>
-            <button onclick="switchLanguage('pt')">Português</button>
             <a href="#home" data-en="Home" data-pt="Início">Home</a>
             <a href="#about" data-en="About" data-pt="Sobre">About</a>
             <a href="#tokenomics" data-en="Tokenomics" data-pt="Tokenomia">Tokenomics</a>
             <a href="#how-to-buy" data-en="How to Buy" data-pt="Como Comprar">How to Buy</a>
             <a href="#contact" data-en="Contact" data-pt="Contacto">Contact</a>
+            <div class="language-selector">
+                <select onchange="switchLanguage(this.value)">
+                    <option value="en">English</option>
+                    <option value="pt">Português</option>
+                </select>
+            </div>
         </nav>
     </header>
 
