@@ -12,6 +12,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-family: 'Poppins', sans-serif; /* Fonte moderna para o header */
 }
 
 header a {
@@ -23,6 +24,10 @@ header a {
 
 header a:hover {
     color: #FFD700; /* Alterado para dourado */
+}
+
+h1, h2 {
+    font-family: 'Montserrat', sans-serif; /* Fonte moderna para títulos */
 }
 
 .container {
