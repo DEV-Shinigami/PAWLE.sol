@@ -67,7 +67,7 @@ header a:hover {
 }
 
 .language-selector option[value="pt"]::before {
-    content: url(./images/PT.jpg);
+    content: url(./images/PT.png);
 }
 
 .container {
