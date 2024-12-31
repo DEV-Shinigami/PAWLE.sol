@@ -55,12 +55,15 @@ header a:hover {
     background-image: url('./images/en.png'); /* Default flag image */
     background-repeat: no-repeat;
     background-position: left 5px center;
+    background-size: 16px 12px;
 }
 
 .language-selector option[value="pt"] {
-    background-image: url(PT.png); /* Portuguese flag image */
+    background-image: url('./images/PT.png'); /* Portuguese flag image */
+    background-repeat: no-repeat;
+    background-position: left 5px center;
+    background-size: 16px 12px;
 }
-
 
 .container {
     max-width: 1200px;
