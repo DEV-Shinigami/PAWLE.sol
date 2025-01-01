@@ -90,3 +90,8 @@ footer {
     text-align: center;
     padding: 1rem 0;
 }
+
+ul, ol {
+    display: inline-block;
+    text-align: left;
+}
