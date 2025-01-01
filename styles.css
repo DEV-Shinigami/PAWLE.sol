@@ -80,7 +80,8 @@ header a:hover {
 
 .hero-logo {
     max-width: 250px;
-    margin-top: 1rem;
+    width: auto;
+    margin: 0 auto;
     display: block;
 }
 
