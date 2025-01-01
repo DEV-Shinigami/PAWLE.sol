@@ -33,7 +33,7 @@ header a:hover {
 }
 
 .language-selector select {
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1.5rem 0.5rem 0.5rem;
     border: 1px solid #ffffff;
     border-radius: 5px;
     background-color: #3A1E68;
@@ -44,11 +44,12 @@ header a:hover {
     appearance: none;
     outline: none;
     transition: background-color 0.3s ease, border-color 0.3s ease;
-    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEuNzA2NCA1LjM1NzY5TDcuNjg3NzggMTAuMjE2M0M3Ljk2MjA1IDEwLjQ3MjkgOC4zNzcwOCAxMC40NzI5IDguNjQ4OTUgMTAuMjE2M0wxNC42MzAyIDUuMzU3NjlDMTQuOTAxMyA1LjEwMjQyIDE1IDQuNjcyNzMgMTUgNC4yNjI5NUMxNSAzLjg0ODM2IDE0LjkwMTMgMy40MTU2OCAxNC42MzAyIDMuMTYwMjhDMTQuMzU5IDIuOTA0NzkgMTMuOTQ5NCAyLjkwNDc5IDEzLjY3NjggMy4xNjAyOEw3LjY4Nzc4IDguMDE5MTlMMS43MDY0IDMuMTYwMjhDMS40MzM3NiAyLjkwNDc5IDAuOTIxNDgyIDIuOTA0NzkgMC42NDk3MzIgMy4xNjAyOEMwLjM3MTg0NiAzLjQxNTY4IDAgMy44NDgzNiAwIDQuMjYyOTVDMCA0LjY3MjczIDAuMzcxODQ2IDUuMTAyNDIgMC42NDk3MzIgNS4zNTc2OUwxLjcwNjQgNS4zNTc2OVoiIGZpbGw9IiNGRkZGRkYiLz48L3N2Zz4=');
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEuNzA2NCA1LjM1NzY5TDcuNjg3NzggMTAuMjE2M0M3Ljk2MjA1IDEwLjQ3MjkgOC4zNzcwOCAxMC40NzI5IDguNjQ4OTUgMTAuMjE2M0wxNC42MzAyIDUuMzU3NjlDMTQuOTAxMyA1LjEwMjQyIDE1IDQuNjcyNzMgMTUgNC4yNjI5NUMxNSAzLjg0ODM2IDE0LjkwMTMgMy40MTU2OCAxNC42MzAyIDMuMTYwMjhDMTQuMzU5IDIuOTA0NzkgMTMuOTQ5NCAyLjkwNDc5IDEzLjY3NjggMy4xNjAyOEw3LjY4Nzc4IDguMDE5MTlMMS43MDY0IDMuMTYwMjhDMS40MzM3NiAyLjkwNDc5IDAuOTIxNDgyIDIuOTA0NzkgMC42NDk3MzIgMy4xNjAyOEMwLjM3MTg0NiAzLjQxNTY4IDAgMy44NDgzNiAwIDQuMjYyOTVDMCA0LjY3MjczIDAuMzcxODQ2IDUuMTAyNDIgMC42NDk3MzIgNS4zNTc2OUwxLjcwNjQgNS4zNTc2OVoiIGZpbGw9IiNGRkZGRkYiLz48L3N2Zz4='); /* Seta ajustada */
     background-repeat: no-repeat;
-    background-position: right 10px center;
+    background-position: calc(100% - 10px) center; /* Alinhamento correto */
     background-size: 12px;
 }
+
 
 .language-selector select:hover {
     background-color: #FFD700;
