@@ -7,7 +7,7 @@ body {
 }
 
 header {
-    background: transparent;
+    background: #1E3A8A; /* Cor uniforme com o seletor */
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
@@ -23,7 +23,7 @@ header a {
 }
 
 header a:hover {
-    color: #FFD700; /* Alterado para dourado */
+    color: #FFD700;
 }
 
 .language-selector {
@@ -36,7 +36,7 @@ header a:hover {
     padding: 0.5rem 1.5rem 0.5rem 0.5rem;
     border: 1px solid #ffffff;
     border-radius: 5px;
-    background-color: #3A1E68;
+    background-color: #1E3A8A; /* Ajustado para combinar com o header */
     color: #ffffff;
     font-family: 'Poppins', sans-serif;
     font-size: 1rem;
@@ -44,9 +44,9 @@ header a:hover {
     appearance: none;
     outline: none;
     transition: background-color 0.3s ease, border-color 0.3s ease;
-    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEuNzA2NCA1LjM1NzY5TDcuNjg3NzggMTAuMjE2M0M3Ljk2MjA1IDEwLjQ3MjkgOC4zNzcwOCAxMC40NzI5IDguNjQ4OTUgMTAuMjE2M0wxNC42MzAyIDUuMzU3NjlDMTQuOTAxMyA1LjEwMjQyIDE1IDQuNjcyNzMgMTUgNC4yNjI5NUMxNSAzLjg0ODM2IDE0LjkwMTMgMy40MTU2OCAxNC42MzAyIDMuMTYwMjhDMTQuMzU5IDIuOTA0NzkgMTMuOTQ5NCAyLjkwNDc5IDEzLjY3NjggMy4xNjAyOEw3LjY4Nzc4IDguMDE5MTlMMS43MDY0IDMuMTYwMjhDMS40MzM3NiAyLjkwNDc5IDAuOTIxNDgyIDIuOTA0NzkgMC42NDk3MzIgMy4xNjAyOEMwLjM3MTg0NiAzLjQxNTY4IDAgMy44NDgzNiAwIDQuMjYyOTVDMCA0LjY3MjczIDAuMzcxODQ2IDUuMTAyNDIgMC42NDk3MzIgNS4zNTc2OUwxLjcwNjQgNS4zNTc2OVoiIGZpbGw9IiNGRkZGRkYiLz48L3N2Zz4='); /* Seta ajustada */
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEuNzA2NCA1LjM1NzY5TDcuNjg3NzggMTAuMjE2M0M3Ljk2MjA1IDEwLjQ3MjkgOC4zNzcwOCAxMC40NzI5IDguNjQ4OTUgMTAuMjE2M0wxNC42MzAyIDUuMzU3NjlDMTQuOTAxMyA1LjEwMjQyIDE1IDQuNjcyNzMgMTUgNC4yNjI5NUMxNSAzLjg0ODM2IDE0LjkwMTMgMy40MTU2OCAxNC42MzAyIDMuMTYwMjhDMTQuMzU5IDIuOTA0NzkgMTMuOTQ5NCAyLjkwNDc5IDEzLjY3NjggMy4xNjAyOEw3LjY4Nzc4IDguMDE5MTlMMS43MDY0IDMuMTYwMjhDMS40MzM3NiAyLjkwNDc5IDAuOTIxNDgyIDIuOTA0NzkgMC42NDk3MzIgMy4xNjAyOEMwLjM3MTg0NiAzLjQxNTY4IDAgMy44NDgzNiAwIDQuMjYyOTVDMCA0LjY3MjczIDAuMzcxODQ2IDUuMTAyNDIgMC42NDk3MzIgNS4zNTc2OUwxLjcwNjQgNS4zNTc2OVoiIGZpbGw9IiNGRkZGRkYiLz48L3N2Zz4='); 
     background-repeat: no-repeat;
-    background-position: calc(100% - 10px) center; /* Alinhamento correto */
+    background-position: calc(100% - 10px) center;
     background-size: 12px;
 }
 
@@ -54,12 +54,6 @@ header a:hover {
     background-color: #FFD700;
     color: #1E3A8A;
     border-color: #FFD700;
-}
-
-.language-selector option {
-    padding: 0.5rem;
-    background-color: #3A1E68;
-    color: #ffffff;
 }
 
 .container {
@@ -74,32 +68,33 @@ section {
 
 .hero {
     text-align: center;
-    padding: 4rem 1rem;
+    padding: 5rem 1rem;
     color: white;
-    background: url('path-to-your-logo.png') no-repeat center center;
     background-size: cover;
 }
 
-/* Estilo atualizado para o título da seção "Home" */
+/* Título maior e mais destacado */
 .hero-title {
-    font-size: 5.5rem; /* Aumenta o tamanho do título */
+    font-size: 4rem; /* Tamanho aumentado */
     font-weight: bold;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
-/* Estilo para o logotipo na seção "Home" */
+/* Parágrafo com fonte maior */
+.hero-paragraph {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Logotipo */
 .hero-logo {
     margin-top: 1rem;
-    max-width: 200px; /* Tamanho máximo do logotipo */
+    max-width: 250px; /* Aumentado para mais destaque */
     width: 100%;
     height: auto;
     display: block;
     margin-left: auto;
     margin-right: auto;
-}
-
-.hero p {
-    font-size: 1.2rem;
 }
 
 footer {
