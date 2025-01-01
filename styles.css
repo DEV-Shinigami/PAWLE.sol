@@ -50,7 +50,6 @@ header a:hover {
     background-size: 12px;
 }
 
-
 .language-selector select:hover {
     background-color: #FFD700;
     color: #1E3A8A;
@@ -81,9 +80,22 @@ section {
     background-size: cover;
 }
 
-.hero h1 {
-    font-size: 2.5rem;
+/* Estilo atualizado para o título da seção "Home" */
+.hero-title {
+    font-size: 3.5rem; /* Aumenta o tamanho do título */
+    font-weight: bold;
     margin-bottom: 1rem;
+}
+
+/* Estilo para o logotipo na seção "Home" */
+.hero-logo {
+    margin-top: 1rem;
+    max-width: 200px; /* Tamanho máximo do logotipo */
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .hero p {
