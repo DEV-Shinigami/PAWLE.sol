@@ -76,5 +76,26 @@ document.addEventListener("mousemove", (event) => {
     }, 2000);
 });
 
+// Seleciona o elemento "Pawly" no cabeçalho
+const pawlyTrigger = document.getElementById("pawly-sound-trigger");
+
+// Lista de sons
+const barkSounds = [
+    document.getElementById("bark-sound-1"),
+];
+
+// Função para reproduzir um som aleatório
+function playRandomBark() {
+    // Seleciona um som aleatório da lista
+    const randomBark = barkSounds[Math.floor(Math.random() * barkSounds.length)];
+    randomBark.currentTime = 0; // Reinicia o som
+    randomBark.play(); // Reproduz o som
+}
+
+// Adiciona o evento de clique ao nome "Pawly"
+pawlyTrigger.addEventListener("click", (event) => {
+    event.preventDefault(); // Previne a ação padrão do link
+    playRandomBark(); // Reproduz o som
+});
 
 
