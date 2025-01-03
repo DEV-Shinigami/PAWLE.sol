@@ -116,17 +116,6 @@ header a:hover {
     }
 }
 
-/* Animação de oscilação (movimento horizontal) */
-@keyframes sway {
-    0%, 100% {
-        transform: translateX(0);
-    }
-    50% {
-        transform: translateX(50px); /* Oscila para a direita */
-    }
-}
-
-
 
 footer {
     background: transparent;
