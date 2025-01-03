@@ -158,8 +158,8 @@ nav a:hover {
     height: 100vh; /* Cobre toda a altura da janela */
     background-image: 
         linear-gradient(to bottom, #1E3A8A, #3A1E68, #6B21A8), /* Fundo degradê */
-        url('path-to-paw-print.png'); /* Imagem das pegadas */
-    background-size: 150px 150px, 150px 150px; /* Tamanho das pegadas */
+        url('Paws.png'); /* Imagem das pegadas */
+    background-size: 350px 350px, 350px 350px; /* Tamanho das pegadas */
     background-repeat: repeat; /* Repete as pegadas */
     pointer-events: none; /* Impede interação com o mouse */
     mask-image: radial-gradient(circle, transparent 0%, black 100%);
