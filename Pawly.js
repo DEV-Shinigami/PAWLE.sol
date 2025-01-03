@@ -1,24 +1,21 @@
 // Seleciona o título
 const title = document.getElementById("interactive-title");
 
-// Define as cores para o efeito de animação
-const colors = ["#FFD700", "#FF5733", "#28B463", "#3498DB", "#9B59B6"];
-let colorIndex = 0;
+// Define as cores vibrantes para o hover
+const vibrantColors = ["#FF5733", "#28B463", "#3498DB", "#9B59B6", "#FFD700"];
 
-// Função para mudar as cores automaticamente
-function animateTitleColors() {
-    title.style.color = colors[colorIndex];
-    title.style.textShadow = `0 0 15px ${colors[colorIndex]}`;
-    colorIndex = (colorIndex + 1) % colors.length;
-}
+// Adiciona o evento de "mouseover" para interatividade
+title.addEventListener("mouseover", () => {
+    // Escolhe uma cor aleatória do array
+    const randomColor = vibrantColors[Math.floor(Math.random() * vibrantColors.length)];
+    title.style.color = randomColor; // Aplica a cor vibrante
+    title.style.transform = "scale(1.8)"; // Aumenta bastante o tamanho
+    title.style.textShadow = `0 0 20px ${randomColor}`; // Adiciona sombra
+});
 
-// Inicia o efeito de troca de cores
-setInterval(animateTitleColors, 1000);
-
-// Adiciona um evento ao clique no título
-title.addEventListener("click", () => {
-    title.style.transform = "scale(1.5)"; // Aumenta de tamanho ao clicar
-    setTimeout(() => {
-        title.style.transform = "scale(1)"; // Volta ao tamanho original
-    }, 300);
+// Adiciona o evento de "mouseout" para restaurar o estado original
+title.addEventListener("mouseout", () => {
+    title.style.color = "#FFFFFF"; // Volta para o branco
+    title.style.transform = "scale(1)"; // Volta ao tamanho original
+    title.style.textShadow = "none"; // Remove a sombra
 });
