@@ -58,4 +58,23 @@ function startFallingCookies() {
 // Inicia os biscoitos caindo
 startFallingCookies();
 
+document.addEventListener("mousemove", (event) => {
+    // Cria uma pegada
+    const paw = document.createElement("div");
+    paw.classList.add("paw-print");
+
+    // Define a posição da pegada com base no cursor
+    paw.style.left = `${event.pageX}px`;
+    paw.style.top = `${event.pageY}px`;
+
+    // Adiciona a pegada ao corpo
+    document.body.appendChild(paw);
+
+    // Remove a pegada após a animação
+    setTimeout(() => {
+        paw.remove();
+    }, 2000);
+});
+
+
 
