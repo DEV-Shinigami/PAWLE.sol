@@ -93,6 +93,7 @@ header a:hover {
     text-shadow: none; /* Sem sombra inicial */
     transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
     cursor: pointer; /* Cursor de interação */
+    font-family: 'Permanent Marker', cursive; /* Fonte estilo graffiti */
 }
 
 footer {
