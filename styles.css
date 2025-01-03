@@ -99,7 +99,7 @@ header a:hover {
 /* Estilo para os biscoitos */
 .cookie {
     position: absolute;
-    background: url('path-to-cookie-image.png') no-repeat center center;
+    background: url('Biscuit.png') no-repeat center center;
     background-size: contain;
     animation: fall 5s linear infinite, rotate 5s linear infinite;
 }
