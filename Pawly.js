@@ -28,7 +28,7 @@ function createCookie() {
     const cookie = document.createElement("div");
     cookie.classList.add("cookie");
 
-    // Posição horizontal aleatória
+    // Posição horizontal aleatória (entre 0 e a largura da janela)
     cookie.style.left = Math.random() * window.innerWidth + "px";
 
     // Tamanho aleatório para os biscoitos
@@ -45,5 +45,5 @@ function createCookie() {
     }, 5000); // Duração da animação
 }
 
-// Cria biscoitos continuamente
+// Cria biscoitos continuamente em posições horizontais aleatórias
 setInterval(createCookie, 500); // Um novo biscoito a cada 500ms
