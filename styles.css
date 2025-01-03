@@ -1,11 +1,11 @@
+/* Global Styles */
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
     background: linear-gradient(to bottom, #1E3A8A, #3A1E68, #6B21A8);
     color: #ffffff;
     text-align: center;
-    overflow-x: hidden; /* Evita barras de rolagem horizontais */
-    /* Configurações gerais */
+    overflow-x: hidden;
 }
 
 header {
@@ -37,28 +37,11 @@ header a:hover {
     color: #FFD700;
 }
 
-nav a {
-    text-decoration: none;
-    color: #ffffff;
-    font-weight: bold;
-    transition: transform 0.2s ease, color 0.2s ease;
-}
-
-nav a:hover {
-    transform: scale(1.1); /* Aumenta ligeiramente */
-    color: #FFD700; /* Muda para dourado */
-}
-
 .center-nav {
     flex: 1;
     display: flex;
     justify-content: center;
     gap: 2rem;
-}
-
-.language-selector {
-    display: flex;
-    align-items: center;
 }
 
 .language-selector select {
@@ -67,80 +50,36 @@ nav a:hover {
     border-radius: 5px;
     background-color: #1E3A8A;
     color: #ffffff;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1rem;
-    cursor: pointer;
-}
-
-.language-selector select:hover {
-    background-color: #FFD700;
-    color: #1E3A8A;
-}
-
-.hero {
-    text-align: center;
-    padding: 5rem 1rem;
 }
 
 .hero-title {
-    font-size: 8rem; /* Tamanho do título permanece o mesmo */
+    font-size: 10rem;
     font-weight: bold;
-    color: #FFFFFF; /* Branco */
-    font-family: 'Permanent Marker', cursive; /* Estilo grafitti */
-    margin-top: 80px; /* Subir o título na página */
-    margin-bottom: 10px; /* Reduz a distância do parágrafo */
-    text-align: center; /* Mantém o título centralizado */
-}
-
-.hero-paragraph {
-    font-size: 1.7rem; /* Tamanho do texto do parágrafo */
     color: #FFFFFF;
-    margin-top: 0; /* Remove o espaço adicional acima */
-    margin-bottom: 20px; /* Mantém um pequeno espaço abaixo */
-    text-align: center; /* Centraliza o parágrafo */
-}
-
-
-.hero-logo {
-    max-width: 250px;
-    width: auto;
-    margin: 0 auto;
-    display: block;
-}
-
-#interactive-title {
-    font-size: 10rem; /* Tamanho padrão */
-    font-weight: bold;
-    color: #FFFFFF; /* Branco como cor inicial */
-    text-shadow: none; /* Sem sombra inicial */
+    font-family: 'Permanent Marker', cursive;
     transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
-    cursor: pointer; /* Cursor de interação */
-    font-family: 'Permanent Marker', cursive; /* Fonte estilo graffiti */
+    cursor: pointer;
 }
 
-/* Estilo para os biscoitos */
 .cookie {
     position: absolute;
-    width: 50px; /* Tamanho do biscoito */
+    width: 50px;
     height: 50px;
-    background-image: url('Biscuit1.png'); /* Substitua pelo caminho da imagem */
+    background-image: url('Biscuit1.png');
     background-size: cover;
     background-repeat: no-repeat;
     animation: fall linear, spin infinite linear;
-    pointer-events: none; /* Impede interação com o mouse */
 }
 
-/* Animação de queda */
 @keyframes fall {
     from {
-        top: -10%; /* Começa fora da tela */
+        top: -10%;
     }
     to {
-        top: 110%; /* Sai pela parte inferior */
+        top: 110%;
     }
 }
 
-/* Animação de rotação */
 @keyframes spin {
     from {
         transform: rotate(0deg);
@@ -150,45 +89,9 @@ nav a:hover {
     }
 }
 
-/* Links que exibem pequenos ossos ao passar o mouse */
-a:hover {
-    text-decoration: none;
-    position: relative;
-}
-
-a:hover::after {
-    content: "🐾";
-    position: absolute;
-    right: -20px;
-    top: 0;
-    font-size: 20px;
-    animation: bounce 0.5s infinite;
-}
-
-/* Botões que pulam */
-button:hover {
-    transform: translateY(-5px); /* Sobe levemente */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Animação de pulo */
-@keyframes bounce {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-}
-
 footer {
     background: transparent;
     color: white;
     text-align: center;
     padding: 1rem 0;
-}
-
-ul, ol {
-    display: inline-block;
-    text-align: left;
 }
