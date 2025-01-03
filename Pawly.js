@@ -20,37 +20,42 @@ title.addEventListener("mouseout", () => {
     title.style.textShadow = "none"; // Remove a sombra
 });
 
-// Seleciona o contêiner onde os biscoitos cairão
-const cookieContainer = document.getElementById("falling-cookies");
+// Seleciona o contêiner onde os biscoitos serão adicionados
+const container = document.getElementById("falling-cookies");
 
 // Função para criar um biscoito
 function createCookie() {
     const cookie = document.createElement("div");
     cookie.classList.add("cookie");
 
-    // Define uma posição horizontal aleatória para o biscoito
-    cookie.style.left = Math.random() * window.innerWidth + "px";
+    // Define posição horizontal aleatória
+    const randomPosition = Math.random() * window.innerWidth;
 
-    // Define um tamanho aleatório para o biscoito
-    const size = Math.random() * 20 + 30; // Entre 30px e 50px
-    cookie.style.width = size + "px";
-    cookie.style.height = size + "px";
+    // Define duração da queda e rotação
+    const fallDuration = Math.random() * 5 + 3; // Entre 3 e 8 segundos
+    const spinDuration = Math.random() * 3 + 2; // Entre 2 e 5 segundos
 
-    // Define a duração da queda de forma aleatória (entre 3s e 6s)
-    const fallDuration = Math.random() * 3 + 3; // 3s a 6s
-
-    // Define as animações com durações personalizadas
-    cookie.style.animation = `fall ${fallDuration}s linear, rotate ${fallDuration}s linear infinite`;
+    // Aplica estilos aleatórios
+    cookie.style.left = `${randomPosition}px`;
+    cookie.style.animationDuration = `${fallDuration}s, ${spinDuration}s`;
 
     // Adiciona o biscoito ao contêiner
-    cookieContainer.appendChild(cookie);
+    container.appendChild(cookie);
 
-    // Remove o biscoito após a animação
+    // Remove o biscoito após a animação para evitar acumulação no DOM
     setTimeout(() => {
         cookie.remove();
-    }, fallDuration * 1000); // Duração total em milissegundos
+    }, fallDuration * 1000);
 }
 
-// Cria biscoitos continuamente em posições e durações aleatórias
-setInterval(createCookie, 500); // Um novo biscoito a cada 500ms
+// Função para criar biscoitos com intervalos aleatórios
+function startFallingCookies() {
+    setInterval(() => {
+        createCookie();
+    }, Math.random() * 2000 + 1000); // Entre 1 e 3 segundos
+}
+
+// Inicia os biscoitos caindo
+startFallingCookies();
+
 
