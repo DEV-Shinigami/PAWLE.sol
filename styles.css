@@ -151,6 +151,36 @@ header a:hover {
     }
 }
 
+/* Links que exibem pequenos ossos ao passar o mouse */
+a:hover {
+    text-decoration: none;
+    position: relative;
+}
+
+a:hover::after {
+    content: "🐾";
+    position: absolute;
+    right: -20px;
+    top: 0;
+    font-size: 20px;
+    animation: bounce 0.5s infinite;
+}
+
+/* Botões que pulam */
+button:hover {
+    transform: translateY(-5px); /* Sobe levemente */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Animação de pulo */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
 
 footer {
     background: transparent;
