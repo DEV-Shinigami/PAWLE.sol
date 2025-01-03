@@ -6,8 +6,6 @@ body {
     text-align: center;
     overflow-x: hidden; /* Evita barras de rolagem horizontais */
     /* Configurações gerais */
-    height: 100vh; /* Garante que o fundo cubra a tela */
-    width: 100vw;
 }
 
 header {
