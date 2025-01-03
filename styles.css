@@ -149,16 +149,18 @@ nav a:hover {
     }
 }
 
-/* Fundo de patas */
+/* Fundo degradê com pegadas ocultas */
 #paw-background {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-image: url('Paws.png'); /* Substitua pelo caminho da imagem da pata */
-    background-size: 150px 150px; /* Ajuste o tamanho das patas */
-    background-repeat: repeat;
+    width: 100vw; /* Cobre toda a largura da janela */
+    height: 100vh; /* Cobre toda a altura da janela */
+    background-image: 
+        linear-gradient(to bottom, #1E3A8A, #3A1E68, #6B21A8), /* Fundo degradê */
+        url('path-to-paw-print.png'); /* Imagem das pegadas */
+    background-size: 150px 150px, 150px 150px; /* Tamanho das pegadas */
+    background-repeat: repeat; /* Repete as pegadas */
     pointer-events: none; /* Impede interação com o mouse */
     mask-image: radial-gradient(circle, transparent 0%, black 100%);
     mask-repeat: no-repeat;
@@ -168,9 +170,7 @@ nav a:hover {
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-size: 100px 100px;
     -webkit-mask-position: -150px -150px;
-    transition: mask-position 0.1s linear, -webkit-mask-position 0.1s linear;
 }
-
 
 /* Links que exibem pequenos ossos ao passar o mouse */
 a:hover {
