@@ -109,14 +109,23 @@ header a:hover {
 /* Animação de queda */
 @keyframes fall {
     0% {
-        transform: translateY(-100%);
-        opacity: 1;
+        transform: translateY(-100%) rotate(0deg); /* Começa no topo */
     }
     100% {
-        transform: translateY(100vh);
-        opacity: 0.5;
+        transform: translateY(100vh) rotate(360deg); /* Termina embaixo com rotação */
     }
 }
+
+/* Animação de oscilação (movimento horizontal) */
+@keyframes sway {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(50px); /* Oscila para a direita */
+    }
+}
+
 
 
 footer {
