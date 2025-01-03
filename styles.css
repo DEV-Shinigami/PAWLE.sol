@@ -96,6 +96,29 @@ header a:hover {
     font-family: 'Permanent Marker', cursive; /* Fonte estilo graffiti */
 }
 
+/* Estilo para os biscoitos */
+.cookie {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: url('path-to-cookie-image.png') no-repeat center center;
+    background-size: contain;
+    animation: fall 5s linear infinite;
+}
+
+/* Animação de queda */
+@keyframes fall {
+    0% {
+        transform: translateY(-100%);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0.5;
+    }
+}
+
+
 footer {
     background: transparent;
     color: white;
