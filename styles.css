@@ -4,6 +4,7 @@ body {
     background: linear-gradient(to bottom, #1E3A8A, #3A1E68, #6B21A8);
     color: #ffffff;
     text-align: center;
+    overflow-x: hidden; /* Evita barras de rolagem horizontais */
 }
 
 header {
