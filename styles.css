@@ -130,8 +130,8 @@ header a:hover {
 
 .paw-print {
     position: absolute;
-    width: 30px; /* Tamanho da pegada */
-    height: 30px;
+    width: 60px; /* Tamanho da pegada */
+    height: 60px;
     background-image: url('Paw.png'); /* Caminho da imagem da pegada */
     background-size: cover;
     background-repeat: no-repeat;
