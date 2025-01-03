@@ -108,19 +108,6 @@ pawlyTrigger.addEventListener("click", (event) => {
     toggleBark(); // Alterna entre reproduzir e parar
 });
 
-// Seleciona o elemento do fundo degradê (camada da frente)
-const foregroundLayer = document.getElementById("foreground-layer");
-
-// Adiciona um evento de movimento do mouse
-document.addEventListener("mousemove", (event) => {
-    // Obtém a posição do cursor
-    const mouseX = event.pageX;
-    const mouseY = event.pageY;
-
-    // Atualiza a posição da máscara no fundo degradê
-    foregroundLayer.style.maskPosition = `${mouseX - 50}px ${mouseY - 50}px`;
-    foregroundLayer.style.webkitMaskPosition = `${mouseX - 50}px ${mouseY - 50}px`;
-});
 
 
 
