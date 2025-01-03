@@ -35,6 +35,7 @@ header a {
 
 header a:hover {
     color: #FFD700;
+    transform: scale(1.1);
 }
 
 .center-nav {
@@ -53,18 +54,28 @@ header a:hover {
 }
 
 .hero-title {
-    font-size: 10rem;
+    font-size: 6rem; /* Tamanho reduzido */
     font-weight: bold;
     color: #FFFFFF;
     font-family: 'Permanent Marker', cursive;
-    transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
-    cursor: pointer;
+    margin-bottom: 1rem; /* Reduz espaço entre título e parágrafo */
+}
+
+.hero-paragraph {
+    font-size: 1.5rem; /* Tamanho ajustado */
+    margin-bottom: 2rem;
+}
+
+.hero-logo {
+    max-width: 200px; /* Tamanho ajustado */
+    margin: 0 auto;
+    display: block;
 }
 
 .cookie {
     position: absolute;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     background-image: url('Biscuit1.png');
     background-size: cover;
     background-repeat: no-repeat;
