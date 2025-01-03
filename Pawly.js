@@ -28,7 +28,7 @@ function createCookie() {
     const cookie = document.createElement("div");
     cookie.classList.add("cookie");
 
-    // Posição horizontal aleatória (entre 0 e a largura da janela)
+    // Posição horizontal inicial aleatória (entre 0 e a largura da janela)
     cookie.style.left = Math.random() * window.innerWidth + "px";
 
     // Tamanho aleatório para os biscoitos
@@ -36,14 +36,21 @@ function createCookie() {
     cookie.style.width = size + "px";
     cookie.style.height = size + "px";
 
+    // Define uma rotação inicial e animações para movimento mais natural
+    const rotation = Math.random() * 360; // Rotação inicial aleatória
+    const horizontalShift = (Math.random() - 0.5) * 100; // Deslocamento horizontal (-50px a +50px)
+
+    cookie.style.transform = `rotate(${rotation}deg)`;
+    cookie.style.animation = `fall ${Math.random() * 3 + 3}s linear, sway ${Math.random() * 2 + 2}s ease-in-out infinite`;
+
     // Adiciona o biscoito ao contêiner
     cookieContainer.appendChild(cookie);
 
     // Remove o biscoito após a animação
     setTimeout(() => {
         cookie.remove();
-    }, 5000); // Duração da animação
+    }, 5000); // Duração total
 }
 
-// Cria biscoitos continuamente em posições horizontais aleatórias
+// Cria biscoitos continuamente em posições e orientações aleatórias
 setInterval(createCookie, 500); // Um novo biscoito a cada 500ms
