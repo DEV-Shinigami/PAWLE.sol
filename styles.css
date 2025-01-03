@@ -122,7 +122,7 @@ nav a:hover {
     position: absolute;
     width: 50px; /* Tamanho do biscoito */
     height: 50px;
-    background-image: url('Biscuit.png'); /* Substitua pelo caminho da imagem */
+    background-image: url('Biscuit1.png'); /* Substitua pelo caminho da imagem */
     background-size: cover;
     background-repeat: no-repeat;
     animation: fall linear, spin infinite linear;
