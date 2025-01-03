@@ -156,7 +156,7 @@ nav a:hover {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-image: url('path-to-paw-print.png'); /* Substitua pelo caminho da imagem da pata */
+    background-image: url('Paws.png'); /* Substitua pelo caminho da imagem da pata */
     background-size: 150px 150px; /* Ajuste o tamanho das patas */
     background-repeat: repeat;
     pointer-events: none; /* Impede interação com o mouse */
