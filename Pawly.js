@@ -28,18 +28,18 @@ function createCookie() {
     const cookie = document.createElement("div");
     cookie.classList.add("cookie");
 
-    // Posição horizontal inicial aleatória (entre 0 e a largura da janela)
+    // Define uma posição horizontal aleatória para o biscoito
     cookie.style.left = Math.random() * window.innerWidth + "px";
 
-    // Tamanho aleatório para os biscoitos
+    // Define um tamanho aleatório para o biscoito
     const size = Math.random() * 20 + 30; // Entre 30px e 50px
     cookie.style.width = size + "px";
     cookie.style.height = size + "px";
 
-    // Duração aleatória da queda (entre 3s e 6s)
+    // Define a duração da queda de forma aleatória (entre 3s e 6s)
     const fallDuration = Math.random() * 3 + 3; // 3s a 6s
 
-    // Define a animação com duração personalizada
+    // Define as animações com durações personalizadas
     cookie.style.animation = `fall ${fallDuration}s linear, rotate ${fallDuration}s linear infinite`;
 
     // Adiciona o biscoito ao contêiner
