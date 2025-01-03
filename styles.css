@@ -159,10 +159,10 @@ nav a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('Paws.png'); /* Substitua pelo caminho da imagem de pegadas */
-    background-size: 150px 150px; /* Tamanho das pegadas */
-    background-repeat: repeat; /* Repete a imagem */
-    z-index: 1;
+    background-image: url('Paws.png'); /* Substitua pelo caminho da imagem */
+    background-size: 450px 450px; /* Ajuste o tamanho das pegadas */
+    background-repeat: repeat; /* Repete as pegadas */
+    z-index: 1; /* Fica atrás */
 }
 
 /* Fundo degradê (camada da frente) */
@@ -173,7 +173,7 @@ nav a:hover {
     width: 100%;
     height: 100%;
     background: linear-gradient(to bottom, #1E3A8A, #3A1E68, #6B21A8); /* Fundo degradê */
-    z-index: 2;
+    z-index: 2; /* Fica à frente */
     mask-image: radial-gradient(circle, transparent 0%, black 100%);
     mask-repeat: no-repeat;
     mask-size: 100px 100px; /* Tamanho inicial da "janela" */
@@ -182,7 +182,9 @@ nav a:hover {
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-size: 100px 100px;
     -webkit-mask-position: -150px -150px;
+    transition: mask-position 0.1s ease, -webkit-mask-position 0.1s ease;
 }
+
 
 
 /* Links que exibem pequenos ossos ao passar o mouse */
