@@ -82,14 +82,23 @@ nav a:hover {
 }
 
 .hero-title {
-    font-size: 8rem;
+    font-size: 8rem; /* Tamanho do título permanece o mesmo */
     font-weight: bold;
+    color: #FFFFFF; /* Branco */
+    font-family: 'Permanent Marker', cursive; /* Estilo grafitti */
+    margin-top: 50px; /* Subir o título na página */
+    margin-bottom: 10px; /* Reduz a distância do parágrafo */
+    text-align: center; /* Mantém o título centralizado */
 }
 
 .hero-paragraph {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
+    font-size: 1.5rem; /* Tamanho do texto do parágrafo */
+    color: #FFFFFF;
+    margin-top: 0; /* Remove o espaço adicional acima */
+    margin-bottom: 20px; /* Mantém um pequeno espaço abaixo */
+    text-align: center; /* Centraliza o parágrafo */
 }
+
 
 .hero-logo {
     max-width: 250px;
