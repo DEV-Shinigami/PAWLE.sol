@@ -82,7 +82,7 @@ nav a:hover {
 }
 
 .hero-title {
-    font-size: 4rem;
+    font-size: 8rem;
     font-weight: bold;
 }
 
@@ -99,7 +99,7 @@ nav a:hover {
 }
 
 #interactive-title {
-    font-size: 6rem; /* Tamanho padrão */
+    font-size: 10rem; /* Tamanho padrão */
     font-weight: bold;
     color: #FFFFFF; /* Branco como cor inicial */
     text-shadow: none; /* Sem sombra inicial */
