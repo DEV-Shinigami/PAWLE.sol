@@ -36,6 +36,18 @@ header a:hover {
     color: #FFD700;
 }
 
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+nav a:hover {
+    transform: scale(1.1); /* Aumenta ligeiramente */
+    color: #FFD700; /* Muda para dourado */
+}
+
 .center-nav {
     flex: 1;
     display: flex;
