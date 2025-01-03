@@ -85,6 +85,20 @@ header a:hover {
     display: block;
 }
 
+.interactive-title {
+    font-size: 4rem; /* Tamanho padrão */
+    font-weight: bold;
+    color: #FFD700; /* Cor dourada inicial */
+    transition: transform 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+
+.interactive-title:hover {
+    transform: scale(1.1); /* Aumenta o tamanho em 10% ao passar o mouse */
+    color: #FFFFFF; /* Muda a cor para branco */
+}
+
+
 footer {
     background: transparent;
     color: white;
