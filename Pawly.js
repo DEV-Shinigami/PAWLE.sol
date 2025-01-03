@@ -84,18 +84,29 @@ const barkSounds = [
     document.getElementById("bark-sound-1"),
 ];
 
-// Função para reproduzir um som aleatório
-function playRandomBark() {
-    // Seleciona um som aleatório da lista
-    const randomBark = barkSounds[Math.floor(Math.random() * barkSounds.length)];
-    randomBark.currentTime = 0; // Reinicia o som
-    randomBark.play(); // Reproduz o som
+// Variável para armazenar o som atualmente em reprodução
+let currentSound = null;
+
+// Função para reproduzir ou parar o som
+function toggleBark() {
+    if (currentSound && !currentSound.paused) {
+        // Se um som estiver tocando, pause e resete
+        currentSound.pause();
+        currentSound.currentTime = 0;
+        currentSound = null; // Limpa o som atual
+    } else {
+        // Se nenhum som estiver tocando, reproduza um som aleatório
+        currentSound = barkSounds[Math.floor(Math.random() * barkSounds.length)];
+        currentSound.currentTime = 0; // Reinicia o som
+        currentSound.play(); // Reproduz o som
+    }
 }
 
 // Adiciona o evento de clique ao nome "Pawly"
 pawlyTrigger.addEventListener("click", (event) => {
     event.preventDefault(); // Previne a ação padrão do link
-    playRandomBark(); // Reproduz o som
+    toggleBark(); // Alterna entre reproduzir e parar
 });
+
 
 
