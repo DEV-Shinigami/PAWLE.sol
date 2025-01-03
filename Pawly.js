@@ -19,3 +19,31 @@ title.addEventListener("mouseout", () => {
     title.style.transform = "scale(1)"; // Volta ao tamanho original
     title.style.textShadow = "none"; // Remove a sombra
 });
+
+// Seleciona o contêiner onde os biscoitos cairão
+const cookieContainer = document.getElementById("falling-cookies");
+
+// Função para criar um biscoito
+function createCookie() {
+    const cookie = document.createElement("div");
+    cookie.classList.add("cookie");
+
+    // Posição horizontal aleatória
+    cookie.style.left = Math.random() * window.innerWidth + "px";
+
+    // Tamanho aleatório para os biscoitos
+    const size = Math.random() * 20 + 30; // Entre 30px e 50px
+    cookie.style.width = size + "px";
+    cookie.style.height = size + "px";
+
+    // Adiciona o biscoito ao contêiner
+    cookieContainer.appendChild(cookie);
+
+    // Remove o biscoito após a animação
+    setTimeout(() => {
+        cookie.remove();
+    }, 5000); // Duração da animação
+}
+
+// Cria biscoitos continuamente
+setInterval(createCookie, 500); // Um novo biscoito a cada 500ms
