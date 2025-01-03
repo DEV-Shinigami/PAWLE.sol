@@ -36,12 +36,11 @@ function createCookie() {
     cookie.style.width = size + "px";
     cookie.style.height = size + "px";
 
-    // Define uma rotação inicial e animações para movimento mais natural
-    const rotation = Math.random() * 360; // Rotação inicial aleatória
-    const horizontalShift = (Math.random() - 0.5) * 100; // Deslocamento horizontal (-50px a +50px)
+    // Duração aleatória da queda (entre 3s e 6s)
+    const fallDuration = Math.random() * 3 + 3; // 3s a 6s
 
-    cookie.style.transform = `rotate(${rotation}deg)`;
-    cookie.style.animation = `fall ${Math.random() * 3 + 3}s linear, sway ${Math.random() * 2 + 2}s ease-in-out infinite`;
+    // Define a animação com duração personalizada
+    cookie.style.animation = `fall ${fallDuration}s linear, rotate ${fallDuration}s linear infinite`;
 
     // Adiciona o biscoito ao contêiner
     cookieContainer.appendChild(cookie);
@@ -49,8 +48,9 @@ function createCookie() {
     // Remove o biscoito após a animação
     setTimeout(() => {
         cookie.remove();
-    }, 5000); // Duração total
+    }, fallDuration * 1000); // Duração total em milissegundos
 }
 
-// Cria biscoitos continuamente em posições e orientações aleatórias
+// Cria biscoitos continuamente em posições e durações aleatórias
 setInterval(createCookie, 500); // Um novo biscoito a cada 500ms
+
