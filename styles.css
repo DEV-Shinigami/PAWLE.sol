@@ -5,6 +5,9 @@ body {
     color: #ffffff;
     text-align: center;
     overflow-x: hidden; /* Evita barras de rolagem horizontais */
+    /* Configurações gerais */
+    height: 100vh; /* Garante que o fundo cubra a tela */
+    width: 100vw;
 }
 
 header {
@@ -149,19 +152,28 @@ nav a:hover {
     }
 }
 
-/* Fundo degradê com pegadas ocultas */
-#paw-background {
+/* Fundo com as pegadas (camada de trás) */
+#background-layer {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw; /* Cobre toda a largura da janela */
-    height: 100vh; /* Cobre toda a altura da janela */
-    background-image: 
-        linear-gradient(to bottom, #1E3A8A, #3A1E68, #6B21A8), /* Fundo degradê */
-        url('Paws.png'); /* Imagem das pegadas */
-    background-size: 350px 350px, 350px 350px; /* Tamanho das pegadas */
-    background-repeat: repeat; /* Repete as pegadas */
-    pointer-events: none; /* Impede interação com o mouse */
+    width: 100%;
+    height: 100%;
+    background-image: url('Paws.png'); /* Substitua pelo caminho da imagem de pegadas */
+    background-size: 150px 150px; /* Tamanho das pegadas */
+    background-repeat: repeat; /* Repete a imagem */
+    z-index: 1;
+}
+
+/* Fundo degradê (camada da frente) */
+#foreground-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #1E3A8A, #3A1E68, #6B21A8); /* Fundo degradê */
+    z-index: 2;
     mask-image: radial-gradient(circle, transparent 0%, black 100%);
     mask-repeat: no-repeat;
     mask-size: 100px 100px; /* Tamanho inicial da "janela" */
@@ -171,6 +183,7 @@ nav a:hover {
     -webkit-mask-size: 100px 100px;
     -webkit-mask-position: -150px -150px;
 }
+
 
 /* Links que exibem pequenos ossos ao passar o mouse */
 a:hover {
