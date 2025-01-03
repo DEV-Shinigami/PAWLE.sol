@@ -132,7 +132,7 @@ header a:hover {
     position: absolute;
     width: 30px; /* Tamanho da pegada */
     height: 30px;
-    background-image: url('path-to-paw-print.png'); /* Caminho da imagem da pegada */
+    background-image: url('Paws.gif'); /* Caminho da imagem da pegada */
     background-size: cover;
     background-repeat: no-repeat;
     pointer-events: none; /* Impede interação com o mouse */
