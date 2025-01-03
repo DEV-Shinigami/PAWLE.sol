@@ -99,20 +99,19 @@ header a:hover {
 /* Estilo para os biscoitos */
 .cookie {
     position: absolute;
+    top: -50px; /* Começa fora da tela, acima */
     background: url('Biscuit.png') no-repeat center center;
     background-size: contain;
-    animation: fall 5s linear infinite, rotate 5s linear infinite;
+    animation: fall 5s linear, rotate 5s linear infinite;
 }
 
 /* Animação de queda */
 @keyframes fall {
     0% {
-        transform: translateY(-100%);
-        opacity: 1; /* Visível no início */
+        transform: translateY(0); /* Começa no topo */
     }
     100% {
-        transform: translateY(100vh);
-        opacity: 0.5; /* Transparência leve no final */
+        transform: translateY(100vh); /* Termina no final da janela */
     }
 }
 
@@ -125,8 +124,6 @@ header a:hover {
         transform: rotate(360deg);
     }
 }
-
-
 
 footer {
     background: transparent;
