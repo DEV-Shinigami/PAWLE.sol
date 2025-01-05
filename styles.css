@@ -23,6 +23,21 @@ header {
     align-items: center;
 }
 
+.logo-container a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif; /* Para garantir consistência */
+    font-size: 1.2rem; /* Ajuste o tamanho para se alinhar aos botões */
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.logo-container a:hover {
+    color: #FFD700; /* Cor dourada ao passar o mouse */
+    transform: scale(1.1); /* Leve aumento ao passar o mouse */
+}
+
+
 .header-logo {
     max-width: 40px;
     margin-right: 10px;
