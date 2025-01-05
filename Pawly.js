@@ -16,25 +16,24 @@ title.addEventListener("mouseout", () => {
     title.style.textShadow = "none";
 });
 
-// Seleciona o elemento "Pawly" no cabeçalho
+// Seleciona o elemento "Pawly"
 const pawlyTrigger = document.getElementById("pawly-sound-trigger");
-
-// Seleciona o áudio
 const barkSound = document.getElementById("bark-sound-1");
 
-// Função para alternar entre reproduzir e parar o som
+// Função para alternar o som
 function toggleBark() {
     if (barkSound.paused) {
-        barkSound.currentTime = 0; // Reinicia o som para o início
-        barkSound.play(); // Reproduz o som
+        barkSound.currentTime = 0; // Reinicia o som
+        barkSound.play(); // Toca o som
     } else {
-        barkSound.pause(); // Pausa o som se já estiver tocando
-        barkSound.currentTime = 0; // Reinicia o som para o início
+        barkSound.pause(); // Pausa o som
+        barkSound.currentTime = 0; // Reinicia para o início
     }
 }
 
-// Adiciona o evento de clique ao nome "Pawly"
+// Adiciona o evento de clique
 pawlyTrigger.addEventListener("click", (event) => {
     event.preventDefault(); // Previne a ação padrão do link
-    toggleBark(); // Alterna entre reproduzir e parar o som
+    toggleBark(); // Chama a função para alternar o som
 });
+
