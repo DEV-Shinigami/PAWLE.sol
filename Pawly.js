@@ -15,25 +15,3 @@ title.addEventListener("mouseout", () => {
     title.style.transform = "scale(1)";
     title.style.textShadow = "none";
 });
-
-// Cookies animados
-const container = document.getElementById("falling-cookies");
-
-function createCookie() {
-    const cookie = document.createElement("div");
-    cookie.classList.add("cookie");
-    const randomPosition = Math.random() * window.innerWidth;
-    cookie.style.left = `${randomPosition}px`;
-    container.appendChild(cookie);
-    setTimeout(() => {
-        if (cookie.parentNode) cookie.remove();
-    }, 5000);
-}
-
-function startFallingCookies() {
-    setInterval(() => {
-        createCookie();
-    }, Math.random() * 2000 + 1000);
-}
-
-startFallingCookies();
