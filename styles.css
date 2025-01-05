@@ -57,9 +57,13 @@ nav a:hover {
 }
 
 .language-selector {
+    position: absolute; /* Torna possível posicionar no canto */
+    top: 1rem; /* Ajuste a altura conforme necessário */
+    right: 2rem; /* Afasta do lado direito */
     display: flex;
     align-items: center;
 }
+
 
 .language-selector select {
     padding: 0.5rem 1rem;
