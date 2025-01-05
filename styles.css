@@ -29,8 +29,12 @@ header {
 }
 
 .center-nav {
+    flex: 1; /* Garante que ocupa o espaço central */
     display: flex;
-    gap: 1.5rem; /* Espaçamento entre os links */
+    justify-content: center; /* Centraliza os links horizontalmente */
+    gap: 2rem; /* Espaçamento entre os links */
+    margin: 0; /* Remove margens indesejadas */
+    padding: 0; /* Remove preenchimento indesejado */
 }
 
 .center-nav a {
