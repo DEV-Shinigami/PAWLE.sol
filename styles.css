@@ -1,11 +1,11 @@
-/* Global Styles */
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
     background: linear-gradient(to bottom, #1E3A8A, #3A1E68, #6B21A8);
     color: #ffffff;
     text-align: center;
-    overflow-x: hidden;
+    overflow-x: hidden; /* Evita barras de rolagem horizontais */
+    /* Configurações gerais */
 }
 
 header {
@@ -35,7 +35,18 @@ header a {
 
 header a:hover {
     color: #FFD700;
-    transform: scale(1.1);
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+nav a:hover {
+    transform: scale(1.1); /* Aumenta ligeiramente */
+    color: #FFD700; /* Muda para dourado */
 }
 
 .center-nav {
@@ -45,52 +56,91 @@ header a:hover {
     gap: 2rem;
 }
 
+.language-selector {
+    display: flex;
+    align-items: center;
+}
+
 .language-selector select {
     padding: 0.5rem 1rem;
     border: 1px solid #ffffff;
     border-radius: 5px;
     background-color: #1E3A8A;
     color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.language-selector select:hover {
+    background-color: #FFD700;
+    color: #1E3A8A;
+}
+
+.hero {
+    text-align: center;
+    padding: 5rem 1rem;
 }
 
 .hero-title {
-    font-size: 6rem; /* Tamanho reduzido */
+    font-size: 8rem; /* Tamanho do título permanece o mesmo */
     font-weight: bold;
-    color: #FFFFFF;
-    font-family: 'Permanent Marker', cursive;
-    margin-bottom: 1rem; /* Reduz espaço entre título e parágrafo */
+    color: #FFFFFF; /* Branco */
+    font-family: 'Permanent Marker', cursive; /* Estilo grafitti */
+    margin-top: 80px; /* Subir o título na página */
+    margin-bottom: 10px; /* Reduz a distância do parágrafo */
+    text-align: center; /* Mantém o título centralizado */
 }
 
 .hero-paragraph {
-    font-size: 1.5rem; /* Tamanho ajustado */
-    margin-bottom: 2rem;
+    font-size: 1.7rem; /* Tamanho do texto do parágrafo */
+    color: #FFFFFF;
+    margin-top: 0; /* Remove o espaço adicional acima */
+    margin-bottom: 20px; /* Mantém um pequeno espaço abaixo */
+    text-align: center; /* Centraliza o parágrafo */
 }
 
+
 .hero-logo {
-    max-width: 200px; /* Tamanho ajustado */
+    max-width: 250px;
+    width: auto;
     margin: 0 auto;
     display: block;
 }
 
+#interactive-title {
+    font-size: 10rem; /* Tamanho padrão */
+    font-weight: bold;
+    color: #FFFFFF; /* Branco como cor inicial */
+    text-shadow: none; /* Sem sombra inicial */
+    transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+    cursor: pointer; /* Cursor de interação */
+    font-family: 'Permanent Marker', cursive; /* Fonte estilo graffiti */
+}
+
+/* Estilo para os biscoitos */
 .cookie {
     position: absolute;
-    width: 40px;
-    height: 40px;
-    background-image: url('Biscuit1.png');
+    width: 50px; /* Tamanho do biscoito */
+    height: 50px;
+    background-image: url('Biscuit1.png'); /* Substitua pelo caminho da imagem */
     background-size: cover;
     background-repeat: no-repeat;
     animation: fall linear, spin infinite linear;
+    pointer-events: none; /* Impede interação com o mouse */
 }
 
+/* Animação de queda */
 @keyframes fall {
     from {
-        top: -10%;
+        top: -10%; /* Começa fora da tela */
     }
     to {
-        top: 110%;
+        top: 110%; /* Sai pela parte inferior */
     }
 }
 
+/* Animação de rotação */
 @keyframes spin {
     from {
         transform: rotate(0deg);
@@ -100,9 +150,45 @@ header a:hover {
     }
 }
 
+/* Links que exibem pequenos ossos ao passar o mouse */
+a:hover {
+    text-decoration: none;
+    position: relative;
+}
+
+a:hover::after {
+    content: "🐾";
+    position: absolute;
+    right: -20px;
+    top: 0;
+    font-size: 20px;
+    animation: bounce 0.5s infinite;
+}
+
+/* Botões que pulam */
+button:hover {
+    transform: translateY(-5px); /* Sobe levemente */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Animação de pulo */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
 footer {
     background: transparent;
     color: white;
     text-align: center;
     padding: 1rem 0;
+}
+
+ul, ol {
+    display: inline-block;
+    text-align: left;
 }

@@ -17,12 +17,15 @@
     </script>
 </head>
 <body>
+
     <header>
         <div class="logo-container">
-            <img src="Pawlylogo.png" alt="Logo do Pawly, uma memecoin com propósito" class="header-logo">
-            <a href="#" id="pawly-sound-trigger">Pawly</a>
-        </div>
-        <audio id="bark-sound-1" src="Doggos.mp3" type="audio/mpeg"></audio>
+    <img src="Pawlylogo.png" alt="Pawly Logo" class="header-logo">
+    <a href="#" id="pawly-sound-trigger">Pawly</a>
+</div>
+
+<!-- Lista de sons -->
+<audio id="bark-sound-1" src="Doggos.mp3"></audio>
         <nav class="center-nav">
             <a href="#home" data-en="Home" data-pt="Início" data-es="Inicio" data-fr="Accueil">Home</a>
             <a href="#about" data-en="About" data-pt="Sobre" data-es="Acerca" data-fr="À propos">About</a>
@@ -40,21 +43,84 @@
         </div>
     </header>
 
+     <!-- Contêiner para os biscoitos caindo -->
     <div id="falling-cookies"></div>
 
-    <main>
-        <section id="home" class="hero">
-            <h1 data-en="PAWLY" data-pt="PAWLY" data-es="PAWLY" data-fr="PAWLY" class="hero-title" id="interactive-title">PAWLY</h1>
-            <p data-en="The memecoin with a mission to help animals and make a difference."
-               data-pt="A memecoin com a missão de ajudar animais e fazer a diferença."
-               data-es="La memecoin con una misión para ayudar a los animales y marcar la diferencia."
-               data-fr="La memecoin avec une mission d’aider les animaux et faire une différence."
-               class="hero-paragraph">
-                A memecoin com a missão de ajudar animais e fazer a diferença.
+    <div class="container">
+        <!-- Home Section -->
+       <section id="home" class="hero">
+    <h1 data-en="PAWLY" data-pt="PAWLY" data-es="PAWLY" data-fr="PAWLY" class="hero-title" id="interactive-title">
+        PAWLY
+    </h1>
+    <p data-en="The memecoin with a mission to help animals and make a difference."
+       data-pt="A memecoin com a missão de ajudar animais e fazer a diferença."
+       data-es="La memecoin con una misión para ayudar a los animales y marcar la diferencia."
+       data-fr="La memecoin avec une mission d’aider les animaux et faire une différence." class="hero-paragraph">
+        The memecoin with a mission to help animals and make a difference.
+    </p>
+    <img src="Pawlylogo.png" alt="Pawly Logo" class="hero-logo">
+</section>
+        <script src="Pawly.js"></script>
+
+        <!-- About Section -->
+        <section id="about">
+            <h2 data-en="About Pawly" data-pt="Sobre o Pawly" data-es="Acerca de Pawly" data-fr="À propos de Pawly">About Pawly</h2>
+            <p data-en="Pawly is not just a memecoin; it’s a movement. Dedicated to supporting animal rescues and foundations like IRA, Pawly brings purpose to the blockchain."
+               data-pt="Pawly não é apenas uma memecoin; é um movimento. Dedicado a apoiar resgates de animais e fundações como a IRA, Pawly traz propósito ao blockchain."
+               data-es="Pawly no es solo una memecoin; es un movimiento. Dedicado a apoyar rescates de animales y fundaciones como IRA, Pawly da propósito a la blockchain."
+               data-fr="Pawly n’est pas seulement une memecoin ; c’est un mouvement. Dédié au soutien des sauvetages d’animaux et des fondations comme IRA, Pawly donne un sens à la blockchain.">
+                Pawly is not just a memecoin; it’s a movement. Dedicated to supporting animal rescues and foundations like IRA, Pawly brings purpose to the blockchain.
             </p>
-            <img src="Pawlylogo.png" alt="Logo do Pawly com design moderno e minimalista" class="hero-logo">
         </section>
-    </main>
+
+        <!-- Tokenomics Section -->
+        <section id="tokenomics">
+            <h2 data-en="Tokenomics" data-pt="Tokenomia" data-es="Tokenomía" data-fr="Tokenomique">Tokenomics</h2>
+            <p data-en="Learn about the supply distribution and how Pawly contributes to its mission:"
+               data-pt="Saiba mais sobre a distribuição de tokens e como Pawly contribui para a sua missão:"
+               data-es="Descubre la distribución de tokens y cómo Pawly contribuye a su misión:"
+               data-fr="Découvrez la répartition des tokens et comment Pawly contribue à sa mission :">
+                Learn about the supply distribution and how Pawly contributes to its mission:
+            </p>
+            <ul>
+                <li data-en="50% for liquidity" data-pt="50% para liquidez" data-es="50% para liquidez" data-fr="50% pour la liquidité">50% for liquidity</li>
+                <li data-en="20% for donations" data-pt="20% para doações" data-es="20% para donaciones" data-fr="20% pour les dons">20% for donations</li>
+                <li data-en="15% for marketing" data-pt="15% para marketing" data-es="15% para marketing" data-fr="15% pour le marketing">15% for marketing</li>
+                <li data-en="15% for team and development" data-pt="15% para a equipa e desenvolvimento" data-es="15% para el equipo y desarrollo" data-fr="15% pour l’équipe et le développement">15% for team and development</li>
+            </ul>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2 data-en="Contact Us" data-pt="Contacte-nos" data-es="Contáctenos" data-fr="Contactez-nous">Contact Us</h2>
+            <p data-en="Have questions? Reach out to us on our social channels or via email:"
+               data-pt="Tem perguntas? Fale conosco através dos nossos canais sociais ou por email:"
+               data-es="¿Tienes preguntas? Contáctanos en nuestros canales sociales o por correo electrónico:"
+               data-fr="Vous avez des questions ? Contactez-nous sur nos réseaux sociaux ou par email :">
+                Have questions? Reach out to us on our social channels or via email:
+            </p>
+            <ul>
+                <li data-en="Email: <a href='mailto:contact@pawly.com'>contact@pawly.com</a>"
+                    data-pt="Email: <a href='mailto:contact@pawly.com'>contact@pawly.com</a>"
+                    data-es="Correo: <a href='mailto:contact@pawly.com'>contact@pawly.com</a>"
+                    data-fr="Email : <a href='mailto:contact@pawly.com'>contact@pawly.com</a>">
+                    Email: <a href='mailto:contact@pawly.com'>contact@pawly.com</a>
+                </li>
+                <li data-en="Telegram: <a href='https://t.me/pawlycommunity'>@pawlycommunity</a>"
+                    data-pt="Telegram: <a href='https://t.me/pawlycommunity'>@pawlycommunity</a>"
+                    data-es="Telegram: <a href='https://t.me/pawlycommunity'>@pawlycommunity</a>"
+                    data-fr="Telegram : <a href='https://t.me/pawlycommunity'>@pawlycommunity</a>">
+                    Telegram: <a href='https://t.me/pawlycommunity'>@pawlycommunity</a>
+                </li>
+                <li data-en="Twitter: <a href='https://twitter.com/pawlycoin'>@pawlycoin</a>"
+                    data-pt="Twitter: <a href='https://twitter.com/pawlycoin'>@pawlycoin</a>"
+                    data-es="Twitter: <a href='https://twitter.com/pawlycoin'>@pawlycoin</a>"
+                    data-fr="Twitter : <a href='https://twitter.com/pawlycoin'>@pawlycoin</a>">
+                    Twitter: <a href='https://twitter.com/pawlycoin'>@pawlycoin</a>
+                </li>
+            </ul>
+        </section>
+    </div>
 
     <footer>
         <p data-en="&copy; 2024 Pawly. All Rights Reserved."
@@ -64,7 +130,5 @@
            &copy; 2024 Pawly. All Rights Reserved.
         </p>
     </footer>
-
-    <script src="Pawly.js"></script>
 </body>
 </html>
