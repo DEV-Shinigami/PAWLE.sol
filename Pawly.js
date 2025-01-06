@@ -16,15 +16,21 @@ title.addEventListener("mouseout", () => {
     title.style.textShadow = "none";
 });
 
-    // Seleciona todos os links de navegação que começam com "#"
+    // Seleciona todos os links que têm um href começando com "#"
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener("click", function (e) {
             e.preventDefault(); // Previne o comportamento padrão do link
 
-            // Faz o scroll suave até o elemento alvo
-            document.querySelector(this.getAttribute("href")).scrollIntoView({
-                behavior: "smooth"
-            });
+            // Seleciona o elemento alvo baseado no href
+            const target = document.querySelector(this.getAttribute("href"));
+
+            // Verifica se o elemento existe antes de tentar rolar
+            if (target) {
+                target.scrollIntoView({
+                    behavior: "smooth", // Scroll suave
+                    block: "start" // Alinha a seção no topo da janela
+                });
+            }
         });
     });
 
