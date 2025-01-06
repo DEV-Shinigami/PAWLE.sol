@@ -20,15 +20,11 @@ header {
 .logo-container {
     display: flex;
     align-items: center;
-    outline: none; /* Remove contornos ao focar */
-    pointer-events: none; /* Impede interação direta */
 }
 
 .header-logo {
     max-width: 40px;
     margin-right: 10px;
-    outline: none; /* Remove contornos ao focar */
-    pointer-events: none; /* Impede interação direta */
 }
 
 .logo-text {
@@ -36,8 +32,13 @@ header {
     font-size: 1.5rem;
     font-weight: bold;
     color: #ffffff;
-    outline: none; /* Remove contornos ao focar */
-    pointer-events: none; /* Impede interação direta */
+}
+
+.header-logo,
+.logo-text {
+    outline: none; /* Remove o contorno ao ser clicado */
+    user-select: none; /* Impede a seleção de texto */
+    cursor: default; /* Define o cursor como padrão */
 }
 
 .center-nav {
