@@ -4,17 +4,16 @@ body {
     background: linear-gradient(to bottom, #1E3A8A, #3A1E68, #6B21A8);
     color: #ffffff;
     text-align: center;
-    overflow-x: hidden; /* Evita barras de rolagem horizontais */
-    /* Configurações gerais */
+    overflow-x: hidden;
 }
 
 header {
-    background: #1E3A8A; /* Cor de fundo */
+    background: #1E3A8A;
     padding: 1rem 2rem;
     display: flex;
-    justify-content: space-between; /* Espaçamento entre os elementos */
+    justify-content: space-between;
     align-items: center;
-    position: relative; /* Para posicionar elementos dentro */
+    position: relative;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -27,16 +26,15 @@ header {
     text-decoration: none;
     color: #ffffff;
     font-weight: bold;
-    font-family: 'Poppins', sans-serif; /* Para garantir consistência */
-    font-size: 1.2rem; /* Ajuste o tamanho para se alinhar aos botões */
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
     transition: transform 0.2s ease, color 0.2s ease;
 }
 
 .logo-container a:hover {
-    color: #FFD700; /* Cor dourada ao passar o mouse */
-    transform: scale(1.1); /* Leve aumento ao passar o mouse */
+    color: #FFD700;
+    transform: scale(1.1);
 }
-
 
 .header-logo {
     max-width: 40px;
@@ -44,12 +42,12 @@ header {
 }
 
 .center-nav {
-    flex: 1; /* Garante que ocupa o espaço central */
+    flex: 1;
     display: flex;
-    justify-content: center; /* Centraliza os links horizontalmente */
-    gap: 2rem; /* Espaçamento entre os links */
-    margin: 0; /* Remove margens indesejadas */
-    padding: 0; /* Remove preenchimento indesejado */
+    justify-content: center;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
 }
 
 .center-nav a {
@@ -60,14 +58,14 @@ header {
 }
 
 .center-nav a:hover {
-    transform: scale(1.1); /* Efeito ao passar o mouse */
-    color: #FFD700; /* Cor dourada */
+    transform: scale(1.1);
+    color: #FFD700;
 }
 
 .language-selector {
-    position: absolute; /* Para posicionar no canto */
+    position: absolute;
     top: 1rem;
-    right: 2rem; /* Ajuste a posição */
+    right: 2rem;
     display: flex;
     align-items: center;
 }
@@ -83,7 +81,6 @@ header {
     cursor: pointer;
 }
 
-
 .language-selector select:hover {
     background-color: #FFD700;
     color: #1E3A8A;
@@ -95,23 +92,22 @@ header {
 }
 
 .hero-title {
-    font-size: 8rem; /* Tamanho do título permanece o mesmo */
+    font-size: 8rem;
     font-weight: bold;
-    color: #FFFFFF; /* Branco */
-    font-family: 'Permanent Marker', cursive; /* Estilo grafitti */
-    margin-top: 80px; /* Subir o título na página */
-    margin-bottom: 10px; /* Reduz a distância do parágrafo */
-    text-align: center; /* Mantém o título centralizado */
+    color: #FFFFFF;
+    font-family: 'Permanent Marker', cursive;
+    margin-top: 80px;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
 .hero-paragraph {
-    font-size: 1.7rem; /* Tamanho do texto do parágrafo */
+    font-size: 1.7rem;
     color: #FFFFFF;
-    margin-top: 0; /* Remove o espaço adicional acima */
-    margin-bottom: 20px; /* Mantém um pequeno espaço abaixo */
-    text-align: center; /* Centraliza o parágrafo */
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
 }
-
 
 .hero-logo {
     max-width: 250px;
@@ -121,20 +117,26 @@ header {
 }
 
 #interactive-title {
-    font-size: 10rem; /* Tamanho padrão */
+    font-size: 10rem;
     font-weight: bold;
-    color: #FFFFFF; /* Branco como cor inicial */
-    text-shadow: none; /* Sem sombra inicial */
+    color: #FFFFFF;
+    text-shadow: none;
     transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
-    cursor: pointer; /* Cursor de interação */
-    font-family: 'Permanent Marker', cursive; /* Fonte estilo graffiti */
+    cursor: pointer;
+    font-family: 'Permanent Marker', cursive;
+}
+
+/* Adição da classe hover-effect */
+.hover-effect {
+    transform: scale(1.2);
+    text-shadow: 0 0 10px var(--color);
 }
 
 /* Links que exibem pequenos ossos ao passar o mouse */
 a:hover {
     text-decoration: none;
     position: relative;
-    color: orange; /* Cor laranja sempre visível */
+    color: orange;
 }
 
 a:hover::after {
@@ -146,9 +148,16 @@ a:hover::after {
     animation: bounce 0.5s infinite;
 }
 
+/* Adição para prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+    a:hover::after {
+        animation: none;
+    }
+}
+
 /* Botões que pulam */
 button:hover {
-    transform: translateY(-5px); /* Sobe levemente */
+    transform: translateY(-5px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -174,12 +183,6 @@ ul, ol {
     text-align: left;
 }
 
-@media (prefers-reduced-motion: reduce) {
-    a:hover::after {
-        animation: none;
-    }
-}
-
 @media (max-width: 768px) {
     header {
         flex-direction: column;
@@ -189,12 +192,12 @@ ul, ol {
 
     .center-nav {
         flex-direction: column;
-        gap: 1rem; /* Ajusta o espaçamento entre os links */
+        gap: 1rem;
         margin-top: 1rem;
     }
 
     .language-selector {
-        position: static; /* Deixa no fluxo normal em telas pequenas */
+        position: static;
         margin-top: 1rem;
     }
 }
