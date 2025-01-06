@@ -114,6 +114,8 @@ header {
     width: auto;
     margin: 0 auto;
     display: block;
+    outline: none; /* Remove contornos ao focar */
+    pointer-events: none; /* Impede interação direta */
 }
 
 #interactive-title {
