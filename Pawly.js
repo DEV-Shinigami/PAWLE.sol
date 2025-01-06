@@ -16,3 +16,15 @@ title.addEventListener("mouseout", () => {
     title.style.textShadow = "none";
 });
 
+    // Seleciona todos os links de navegação que começam com "#"
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault(); // Previne o comportamento padrão do link
+
+            // Faz o scroll suave até o elemento alvo
+            document.querySelector(this.getAttribute("href")).scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+    });
+
