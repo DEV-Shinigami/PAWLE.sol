@@ -56,3 +56,8 @@ title.addEventListener("mouseout", () => {
         });
     });
 
+ // Garante que a página volte ao topo ao recarregar
+    window.addEventListener("beforeunload", function () {
+        window.scrollTo(0, 0); // Move o scroll para o topo da página
+    });
+
