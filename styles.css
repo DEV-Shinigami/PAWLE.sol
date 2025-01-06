@@ -173,6 +173,13 @@ ul, ol {
     display: inline-block;
     text-align: left;
 }
+
+@media (prefers-reduced-motion: reduce) {
+    a:hover::after {
+        animation: none;
+    }
+}
+
 @media (max-width: 768px) {
     header {
         flex-direction: column;
