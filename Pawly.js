@@ -61,3 +61,4 @@ title.addEventListener("mouseout", () => {
         window.scrollTo(0, 0); // Move o scroll para o topo da página
     });
 
+document.querySelector('footer p').innerHTML = `&copy; ${new Date().getFullYear()} Pawly. All Rights Reserved.`;
