@@ -140,11 +140,14 @@ a:hover {
 }
 
 a:hover::after {
-    content: "🐾";
+    content: "";
     position: absolute;
     right: -20px;
     top: 0;
-    font-size: 20px;
+    width: 20px; /* Tamanho do ícone */
+    height: 20px;
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23FFD700"%3E%3Cpath d="M12 2c2.762 0 5.5 1.582 5.5 4.5S14.395 10.333 12 13C9.605 10.333 6.5 8.417 6.5 6.5 6.5 3.582 9.238 2 12 2Zm0 9c1.612 0 3.226-.881 4.274-2.086a6.332 6.332 0 0 0 .226-7.414C15.226 1.08 13.612 0 12 0c-1.612 0-3.226 1.08-4.274 2.5A6.332 6.332 0 0 0 7.5 9c1.048 1.205 2.662 2.086 4.5 2.086Z"/%3E%3C/svg%3E');
+    background-size: cover;
     animation: bounce 0.5s infinite;
 }
 
