@@ -140,7 +140,7 @@ a:hover {
 }
 
 a:hover::after {
-    content: "";
+    content: "🐾";
     position: absolute;
     right: -20px;
     top: 0;
