@@ -166,6 +166,20 @@ a:hover::after {
     }
 }
 
+/* Para navegadores compatíveis com scrollbar */
+body::-webkit-scrollbar {
+    width: 5px; /* Largura da barra */
+}
+
+body::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3); /* Cor da barra */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5); /* Cor ao passar o mouse */
+}
+
 /* Footer */
 footer {
     background: transparent;
