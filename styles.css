@@ -36,11 +36,6 @@ body {
     transform: scale(0.8);
 }
 
-.center-nav {
-    display: flex;
-    gap: 2rem;
-}
-
 .language-selector select {
     padding: 0.5rem;
     background-color: #ffffff;
@@ -70,14 +65,14 @@ body {
     cursor: default; /* Define o cursor como padrão */
 }
 
-/*.center-nav {
+.center-nav {
     flex: 1; 
     display: flex;
     justify-content: center; 
     gap: 2rem; 
     margin: 0; 
     padding: 0; 
-}*/
+}
 
 .center-nav a {
     text-decoration: none;
