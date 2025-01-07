@@ -1,100 +1,80 @@
+/* Body: Configurações gerais */
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
     background: linear-gradient(to bottom, #1E3A8A, #3A1E68, #6B21A8);
     color: #ffffff;
     text-align: center;
-    overflow-x: hidden;
+    overflow-x: hidden; /* Evita barras de rolagem horizontais */
 }
 
-#dynamic-header {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    background-color: #1E3A8A;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* Header: Configurações do cabeçalho */
+header {
+    background: #1E3A8A; /* Cor de fundo */
     padding: 1rem 2rem;
-    z-index: 1000;
-    transition: all 0.3s ease;
+    display: flex;
+    justify-content: space-between; /* Espaça os elementos do header */
+    align-items: center; /* Alinha verticalmente */
+    position: relative; /* Para posicionar elementos dentro */
+    font-family: 'Poppins', sans-serif;
 }
 
-#dynamic-header.small {
-    padding: 0.5rem 1rem;
-    background-color: #000000;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+/* Logo e Nome no Header */
+.logo-container {
+    display: flex;
+    align-items: center; /* Alinha verticalmente o logo e o texto */
 }
 
 .header-logo {
-    max-width: 40px;
-    transition: transform 0.3s ease;
+    max-width: 40px; /* Tamanho máximo do logo */
+    margin-right: 10px; /* Espaço entre o logo e o texto */
 }
 
-#dynamic-header.small .header-logo {
-    transform: scale(0.8);
-}
-
-.language-selector select {
-    padding: 0.5rem;
-    background-color: #ffffff;
-    color: #1E3A8A;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.logo-container {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem; /* Espaço entre o logotipo e o texto */
-}
-
-.logo-text {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.5rem;
-    font-weight: bold;
+.logo-container a {
+    text-decoration: none;
     color: #ffffff;
+    font-weight: bold;
+    font-size: 1.2rem; /* Ajuste do tamanho do texto */
+    transition: transform 0.2s ease, color 0.2s ease; /* Suaviza transformações */
 }
 
-.header-logo,
-.logo-text {
-    outline: none; /* Remove o contorno ao ser clicado */
-    user-select: none; /* Impede a seleção de texto */
-    cursor: default; /* Define o cursor como padrão */
+.logo-container a:hover {
+    color: #FFD700; /* Cor dourada ao passar o mouse */
+    transform: scale(1.1); /* Leve aumento ao passar o mouse */
 }
 
+/* Navegação Central */
 .center-nav {
-    flex: 1; 
+    flex: 1; /* Garante que ocupe o espaço central */
     display: flex;
-    justify-content: center; 
-    gap: 2rem; 
-    margin: 0; 
-    padding: 0; 
+    justify-content: center; /* Centraliza os links horizontalmente */
+    gap: 2rem; /* Espaçamento entre os links */
+    margin: 0; /* Remove margens desnecessárias */
+    padding: 0; /* Remove preenchimento desnecessário */
 }
 
 .center-nav a {
-    text-decoration: none;
+    text-decoration: none; /* Remove sublinhado */
     color: #ffffff;
     font-weight: bold;
     transition: transform 0.2s ease, color 0.2s ease;
 }
 
 .center-nav a:hover {
-    transform: scale(1.1);
-    color: #FFD700;
+    transform: scale(1.1); /* Efeito de escala ao passar o mouse */
+    color: #FFD700; /* Cor dourada */
 }
 
+/* Seleção de Idioma */
 .language-selector {
     position: absolute;
     top: 1rem;
-    right: 2rem;
+    right: 2rem; /* Ajusta a posição */
     display: flex;
     align-items: center;
 }
 
-/*.language-selector select {
+.language-selector select {
     padding: 0.5rem 1rem;
     border: 1px solid #ffffff;
     border-radius: 5px;
@@ -103,95 +83,76 @@ body {
     font-family: 'Poppins', sans-serif;
     font-size: 1rem;
     cursor: pointer;
-}*/
+}
 
 .language-selector select:hover {
-    background-color: #FFD700;
+    background-color: #FFD700; /* Cor ao passar o mouse */
     color: #1E3A8A;
 }
 
+/* Hero Section */
 .hero {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
+    padding: 5rem 1rem;
 }
 
 .hero-title {
-    font-size: 8rem;
+    font-size: 8rem; /* Tamanho do título */
     font-weight: bold;
-    color: #FFFFFF;
     font-family: 'Permanent Marker', cursive;
-    margin-top: 80px;
-    margin-bottom: 10px;
-    text-align: center;
+    color: #FFFFFF;
+    margin-top: 80px; /* Ajusta a posição vertical */
+    margin-bottom: 10px; /* Espaço com o parágrafo */
 }
 
 .hero-paragraph {
-    font-size: 1.7rem;
+    font-size: 1.7rem; /* Tamanho do parágrafo */
     color: #FFFFFF;
-    margin-top: 0;
-    margin-bottom: 20px;
-    text-align: center;
+    margin-top: 0; /* Remove espaço adicional acima */
+    margin-bottom: 20px; /* Pequeno espaço abaixo */
 }
 
 .hero-logo {
-    max-width: 250px;
+    max-width: 250px; /* Limita o tamanho da imagem */
     width: auto;
-    margin: 0 auto;
+    margin: 0 auto; /* Centraliza a imagem */
     display: block;
-    outline: none; /* Remove contornos ao focar */
-    pointer-events: none; /* Impede interação direta */
 }
 
+/* Título Interativo */
 #interactive-title {
-    font-size: 10rem;
+    font-size: 10rem; /* Tamanho do título */
     font-weight: bold;
     color: #FFFFFF;
-    text-shadow: none;
+    text-shadow: none; /* Sem sombra inicial */
     transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
-    cursor: pointer;
+    cursor: pointer; /* Mostra que o título é interativo */
     font-family: 'Permanent Marker', cursive;
 }
 
-/* Adição da classe hover-effect */
-.hover-effect {
-    transform: scale(1.2);
-    text-shadow: 0 0 10px var(--color);
-}
-
-/* Links que exibem pequenos ossos ao passar o mouse */
+/* Efeitos de Hover em Links */
 a:hover {
-    text-decoration: none;
+    text-decoration: none; /* Remove sublinhado */
     position: relative;
-    color: orange;
+    color: orange; /* Cor laranja ao passar o mouse */
 }
 
 a:hover::after {
-    content: "🐾";
+    content: "🐾"; /* Ícone adicionado ao passar o mouse */
     position: absolute;
     right: -20px;
     top: 0;
     font-size: 20px;
-    animation: bounce 0.5s infinite;
-    filter: hue-rotate(45deg) brightness(3.5); /* Ajuste de cor */
+    animation: bounce 0.5s infinite; /* Animação de pulo */
 }
 
-
-/* Adição para prefers-reduced-motion */
-@media (prefers-reduced-motion: reduce) {
-    a:hover::after {
-        animation: none;
-    }
-}
-
-/* Botões que pulam */
+/* Botões Interativos */
 button:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px); /* Efeito de elevação */
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Animação de pulo */
+/* Animação de Pulo */
 @keyframes bounce {
     0%, 100% {
         transform: translateY(0);
@@ -201,6 +162,7 @@ button:hover {
     }
 }
 
+/* Footer */
 footer {
     background: transparent;
     color: white;
@@ -208,26 +170,28 @@ footer {
     padding: 1rem 0;
 }
 
+/* Listas */
 ul, ol {
     display: inline-block;
     text-align: left;
 }
 
+/* Responsividade: Telas Menores */
 @media (max-width: 768px) {
     header {
-        flex-direction: column;
+        flex-direction: column; /* Empilha os elementos */
         align-items: center;
         text-align: center;
     }
 
     .center-nav {
-        flex-direction: column;
-        gap: 1rem;
+        flex-direction: column; /* Empilha os links */
+        gap: 1rem; /* Reduz o espaçamento */
         margin-top: 1rem;
     }
 
     .language-selector {
-        position: static;
+        position: static; /* Coloca no fluxo normal */
         margin-top: 1rem;
     }
 }
