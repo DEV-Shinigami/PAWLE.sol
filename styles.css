@@ -42,12 +42,12 @@ header {
 }
 
 .center-nav {
-    flex: 1;
+    flex: 1; /* Garante que ocupe o espaço central */
     display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin: 0;
-    padding: 0;
+    justify-content: center; /* Centraliza os links horizontalmente */
+    gap: 2rem; /* Espaçamento entre os links */
+    margin: 0; /* Remove margens adicionais */
+    padding: 0; /* Remove preenchimento indesejado */
 }
 
 .center-nav a {
