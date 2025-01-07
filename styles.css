@@ -156,7 +156,7 @@ a:hover::after {
 /* Botões Interativos */
 button:hover {
     transform: translateY(-5px); /* Efeito de elevação */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
 }
 
 /* Animação de Pulo */
