@@ -8,22 +8,21 @@ body {
     overflow-x: hidden;
 }
 
-/* Header Geral */
 #unique-header {
     position: fixed;
     top: 0;
-    left: 0;
-    width: 100%;
-    height: 100px;
+    left: 0; /* Garante que o header esteja alinhado ao lado esquerdo */
+    width: 100%; /* Ocupa toda a largura da tela */
+    padding: 0 2rem; /* Padding interno */
+    box-sizing: border-box; /* Inclui o padding na largura total */
     background: linear-gradient(135deg, #1E3A8A, #6B21A8);
-    background-size: 300% 300%;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 2rem;
-    z-index: 1000;
+    justify-content: space-between; /* Espaça os itens uniformemente */
+    align-items: center; /* Alinha os itens verticalmente */
+    z-index: 1000; /* Mantém acima do restante do conteúdo */
     animation: gradientMove 6s infinite alternate;
 }
+
 
 /* Logotipo Flutuante */
 .floating-logo {
@@ -73,6 +72,9 @@ body {
 .language-selector {
     display: flex;
     align-items: center;
+    margin: 0; /* Remove margens extras */
+    padding: 0; /* Remove preenchimentos extras */
+    position: relative; /* Garante que fique dentro do fluxo */
     animation: float 3s ease-in-out infinite;
 }
 
