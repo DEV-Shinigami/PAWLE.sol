@@ -15,8 +15,7 @@ header {
     align-items: center;
     font-family: 'Poppins', sans-serif;
     position: fixed; /* Fixa o cabeçalho no topo */
-    width: 100%; /* Garante que ocupe toda a largura */
-    z-index: 1000; /* Mantém acima do restante do conteúdo */
+    
 }
 
 .logo-container {
