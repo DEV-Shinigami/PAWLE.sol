@@ -13,8 +13,10 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /*position: relative;*/
     font-family: 'Poppins', sans-serif;
+    position: fixed; /* Fixa o cabeçalho no topo */
+    width: 100%; /* Garante que ocupe toda a largura */
+    z-index: 1000; /* Mantém acima do restante do conteúdo */
 }
 
 .logo-container {
@@ -88,8 +90,12 @@ header {
 }
 
 .hero {
-    text-align: center;
-    padding: 5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ocupa a altura total da janela */
+    padding-top: 5rem; /* Ajuste para compensar o cabeçalho fixo */
 }
 
 .hero-title {
