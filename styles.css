@@ -43,6 +43,13 @@ header {
     transform: scale(1.1); /* Leve aumento ao passar o mouse */
 }
 
+.header-logo,
+.logo-text {
+    outline: none; /* Remove o contorno ao ser clicado */
+    user-select: none; /* Impede a seleção de texto */
+    cursor: default; /* Define o cursor como padrão */
+}
+
 /* Navegação Central */
 .center-nav {
     flex: 1; /* Garante que ocupe o espaço central */
