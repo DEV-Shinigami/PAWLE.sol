@@ -95,4 +95,10 @@ document.querySelector('.language-selector select').addEventListener('change', (
     switchLanguage(e.target.value); // Passa o idioma selecionado para a função
 });
 
+// Sobrescreve eval temporariamente para monitorar
+const originalEval = window.eval;
+window.eval = function(code) {
+    console.warn("Eval foi chamado com o código:", code);
+    return originalEval(code);
+};
 
