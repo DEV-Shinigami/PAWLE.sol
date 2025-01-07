@@ -45,6 +45,13 @@ body {
     letter-spacing: 1px;
 }
 
+.header-logo,
+.logo-text {
+    outline: none; /* Remove o contorno ao ser clicado */
+    user-select: none; /* Impede a seleção de texto */
+    cursor: default; /* Define o cursor como padrão */
+}
+
 /* Navegação Flutuante */
 .floating-nav {
     display: flex;
