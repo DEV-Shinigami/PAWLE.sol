@@ -62,3 +62,14 @@ title.addEventListener("mouseout", () => {
     });
 
 document.querySelector('footer p').innerHTML = `&copy; ${new Date().getFullYear()} Pawly. All Rights Reserved.`;
+
+// JavaScript para ativar a transformação do cabeçalho ao rolar
+window.addEventListener("scroll", () => {
+    const header = document.getElementById("dynamic-header");
+    if (window.scrollY > 50) {
+        header.classList.add("small");
+    } else {
+        header.classList.remove("small");
+    }
+});
+
