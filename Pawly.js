@@ -80,5 +80,19 @@ document.addEventListener("mousemove", (e) => {
     const y = (e.clientY / window.innerHeight) * 10 - 5; // Movimento vertical
     header.style.backgroundPosition = `${50 + x}% ${50 + y}%`;
 });
+// Função para trocar o idioma
+function switchLanguage(lang) {
+    // Seleciona todos os elementos que possuem atributos de tradução
+    const elements = document.querySelectorAll('[data-en], [data-pt], [data-es], [data-fr]');
+    elements.forEach(el => {
+        // Atualiza o conteúdo do elemento com base no idioma selecionado
+        el.innerHTML = el.getAttribute(`data-${lang}`);
+    });
+}
+
+// Adiciona o evento de alteração no seletor de idioma
+document.querySelector('.language-selector select').addEventListener('change', (e) => {
+    switchLanguage(e.target.value); // Passa o idioma selecionado para a função
+});
 
 
