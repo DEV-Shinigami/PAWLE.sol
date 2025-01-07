@@ -8,14 +8,30 @@ body {
 }
 
 header {
-    background: #1E3A8A;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     padding: 1rem 2rem;
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: 'Poppins', sans-serif;
-    position: fixed; /* Fixa o cabeçalho no topo */
+    background: linear-gradient(90deg, #1E3A8A, #3A1E68, #6B21A8);
+    background-size: 200% 200%;
+    animation: gradientAnimation 5s infinite alternate;
+    color: #ffffff;
 }
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
 
 .logo-container {
     display: flex;
