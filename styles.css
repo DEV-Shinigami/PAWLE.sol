@@ -7,41 +7,53 @@ body {
     overflow-x: hidden;
 }
 
-header {
+#dynamic-header {
     position: fixed;
+    width: 100%;
     top: 0;
     left: 0;
-    width: 100%;
-    padding: 1rem 2rem;
-    z-index: 1000;
+    background-color: #1E3A8A;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(90deg, #1E3A8A, #3A1E68, #6B21A8);
-    background-size: 200% 200%;
-    animation: gradientAnimation 5s infinite alternate;
-    color: #ffffff;
+    padding: 1rem 2rem;
+    z-index: 1000;
+    transition: all 0.3s ease;
 }
 
-@keyframes gradientAnimation {
-    0% {
-        background-position: 0% 50%;
-    }
-    100% {
-        background-position: 100% 50%;
-    }
+#dynamic-header.small {
+    padding: 0.5rem 1rem;
+    background-color: #000000;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.header-logo {
+    max-width: 40px;
+    transition: transform 0.3s ease;
+}
+
+#dynamic-header.small .header-logo {
+    transform: scale(0.8);
+}
+
+.center-nav {
+    display: flex;
+    gap: 2rem;
+}
+
+.language-selector select {
+    padding: 0.5rem;
+    background-color: #ffffff;
+    color: #1E3A8A;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
 .logo-container {
     display: flex;
     align-items: center;
     gap: 0.5rem; /* Espaço entre o logotipo e o texto */
-}
-
-.header-logo {
-    max-width: 40px;
-    margin-right: 10px;
 }
 
 .logo-text {
@@ -58,14 +70,14 @@ header {
     cursor: default; /* Define o cursor como padrão */
 }
 
-.center-nav {
-    flex: 1; /* Garante que ocupe o espaço central */
+/*.center-nav {
+    flex: 1; 
     display: flex;
-    justify-content: center; /* Centraliza os links horizontalmente */
-    gap: 2rem; /* Espaçamento entre os links */
-    margin: 0; /* Remove margens adicionais */
-    padding: 0; /* Remove preenchimento indesejado */
-}
+    justify-content: center; 
+    gap: 2rem; 
+    margin: 0; 
+    padding: 0; 
+}*/
 
 .center-nav a {
     text-decoration: none;
@@ -87,7 +99,7 @@ header {
     align-items: center;
 }
 
-.language-selector select {
+/*.language-selector select {
     padding: 0.5rem 1rem;
     border: 1px solid #ffffff;
     border-radius: 5px;
@@ -96,7 +108,7 @@ header {
     font-family: 'Poppins', sans-serif;
     font-size: 1rem;
     cursor: pointer;
-}
+}*/
 
 .language-selector select:hover {
     background-color: #FFD700;
