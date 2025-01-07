@@ -13,9 +13,10 @@ body {
     top: 0;
     left: 0; /* Garante que o header esteja alinhado ao lado esquerdo */
     width: 100%; /* Ocupa toda a largura da tela */
+    height: 100px; /* Ajusta a altura para um tamanho consistente */
     padding: 0 2rem; /* Padding interno */
     box-sizing: border-box; /* Inclui o padding na largura total */
-    background: linear-gradient(135deg, #1E3A8A, #6B21A8);
+    background: transparent; /* Fundo transparente */
     display: flex;
     justify-content: space-between; /* Espaça os itens uniformemente */
     align-items: center; /* Alinha os itens verticalmente */
@@ -143,17 +144,17 @@ body {
 
 /* Reação ao Rolar */
 #unique-header.small {
-    height: 70px;
-    background: #000000;
+    height: 70px; /* Reduz a altura ao rolar */
+    background: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente ao rolar */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 #unique-header.small .floating-logo img {
-    transform: scale(0.8);
+    transform: scale(0.8); /* Reduz o logotipo */
 }
 
 #unique-header.small .floating-nav a {
-    font-size: 0.9rem;
+    font-size: 0.9rem; /* Ajusta o tamanho dos links */
 }
 
 /* Links que exibem pequenos ossos ao passar o mouse */
