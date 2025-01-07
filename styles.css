@@ -5,96 +5,84 @@ body {
     background: linear-gradient(to bottom, #1E3A8A, #3A1E68, #6B21A8);
     color: #ffffff;
     text-align: center;
-    overflow-x: hidden; /* Evita barras de rolagem horizontais */
+    overflow-x: hidden;
 }
 
-/* Header: Configurações do cabeçalho */
-header {
-    background: #1E3A8A; /* Cor de fundo */
-    padding: 1rem 2rem;
+/* Header Geral */
+#unique-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(135deg, #1E3A8A, #6B21A8);
+    background-size: 300% 300%;
     display: flex;
-    justify-content: space-between; /* Espaça os elementos do header */
-    align-items: center; /* Alinha verticalmente */
-    position: relative; /* Para posicionar elementos dentro */
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    z-index: 1000;
+    animation: gradientMove 6s infinite alternate;
+}
+
+/* Logotipo Flutuante */
+.floating-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    animation: float 3s ease-in-out infinite;
+}
+
+.floating-logo img {
+    max-width: 50px;
+    transition: transform 0.3s ease;
+}
+
+.floating-logo .logo-text {
     font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    letter-spacing: 1px;
 }
 
-/* Logo e Nome no Header */
-.logo-container {
+/* Navegação Flutuante */
+.floating-nav {
     display: flex;
-    align-items: center; /* Alinha verticalmente o logo e o texto */
+    gap: 2rem;
+    animation: float 3s ease-in-out infinite;
 }
 
-.header-logo {
-    max-width: 40px; /* Tamanho máximo do logo */
-    margin-right: 10px; /* Espaço entre o logo e o texto */
-}
-
-.logo-container a {
+.floating-nav a {
     text-decoration: none;
-    color: #ffffff;
     font-weight: bold;
-    font-size: 1.2rem; /* Ajuste do tamanho do texto */
-    transition: transform 0.2s ease, color 0.2s ease; /* Suaviza transformações */
-}
-
-.logo-container a:hover {
-    color: #FFD700; /* Cor dourada ao passar o mouse */
-    transform: scale(1.1); /* Leve aumento ao passar o mouse */
-}
-
-.header-logo,
-.logo-text {
-    outline: none; /* Remove o contorno ao ser clicado */
-    user-select: none; /* Impede a seleção de texto */
-    cursor: default; /* Define o cursor como padrão */
-}
-
-/* Navegação Central */
-.center-nav {
-    flex: 1; /* Garante que ocupe o espaço central */
-    display: flex;
-    justify-content: center; /* Centraliza os links horizontalmente */
-    gap: 2rem; /* Espaçamento entre os links */
-    margin: 0; /* Remove margens desnecessárias */
-    padding: 0; /* Remove preenchimento desnecessário */
-}
-
-.center-nav a {
-    text-decoration: none; /* Remove sublinhado */
+    font-size: 1rem;
     color: #ffffff;
-    font-weight: bold;
-    transition: transform 0.2s ease, color 0.2s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.center-nav a:hover {
-    transform: scale(1.1); /* Efeito de escala ao passar o mouse */
-    color: #FFD700; /* Cor dourada */
+.floating-nav a:hover {
+    background-color: #FFD700;
+    color: #1E3A8A;
+    transform: scale(1.2);
 }
 
 /* Seleção de Idioma */
 .language-selector {
-    position: absolute;
-    top: 1rem;
-    right: 2rem; /* Ajusta a posição */
     display: flex;
     align-items: center;
+    animation: float 3s ease-in-out infinite;
 }
 
 .language-selector select {
-    padding: 0.5rem 1rem;
-    border: 1px solid #ffffff;
-    border-radius: 5px;
-    background-color: #1E3A8A;
-    color: #ffffff;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1rem;
-    cursor: pointer;
-}
-
-.language-selector select:hover {
-    background-color: #FFD700; /* Cor ao passar o mouse */
+    padding: 0.5rem;
+    background-color: #ffffff;
     color: #1E3A8A;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 /* Hero Section */
@@ -104,62 +92,71 @@ header {
 }
 
 .hero-title {
-    font-size: 8rem; /* Tamanho do título */
+    font-size: 8rem;
     font-weight: bold;
     font-family: 'Permanent Marker', cursive;
     color: #FFFFFF;
-    margin-top: 80px; /* Ajusta a posição vertical */
-    margin-bottom: 10px; /* Espaço com o parágrafo */
+    margin-top: 80px;
+    margin-bottom: 10px;
 }
 
 .hero-paragraph {
-    font-size: 1.7rem; /* Tamanho do parágrafo */
+    font-size: 1.7rem;
     color: #FFFFFF;
-    margin-top: 0; /* Remove espaço adicional acima */
-    margin-bottom: 20px; /* Pequeno espaço abaixo */
+    margin-top: 0;
+    margin-bottom: 20px;
 }
 
 .hero-logo {
-    max-width: 250px; /* Limita o tamanho da imagem */
-    width: auto;
-    margin: 0 auto; /* Centraliza a imagem */
+    max-width: 250px;
+    margin: 0 auto;
     display: block;
 }
 
-/* Título Interativo */
-#interactive-title {
-    font-size: 10rem; /* Tamanho do título */
-    font-weight: bold;
-    color: #FFFFFF;
-    text-shadow: none; /* Sem sombra inicial */
-    transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
-    cursor: pointer; /* Mostra que o título é interativo */
-    font-family: 'Permanent Marker', cursive;
+/* Animações */
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
 }
 
-/* Efeitos de Hover em Links */
-a:hover {
-    text-decoration: none; /* Remove sublinhado */
-    position: relative;
-    color: orange; /* Cor laranja ao passar o mouse */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
 }
 
+/* Reação ao Rolar */
+#unique-header.small {
+    height: 70px;
+    background: #000000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+#unique-header.small .floating-logo img {
+    transform: scale(0.8);
+}
+
+#unique-header.small .floating-nav a {
+    font-size: 0.9rem;
+}
+
+/* Links que exibem pequenos ossos ao passar o mouse */
 a:hover::after {
-    content: "🐾"; /* Ícone adicionado ao passar o mouse */
+    content: "🐾";
     position: absolute;
     right: -20px;
     top: 0;
     font-size: 20px;
-    animation: bounce 0.5s infinite; /* Animação de pulo */
+    animation: bounce 0.5s infinite;
 }
 
-/* Botões Interativos */
-button:hover {
-    transform: translateY(-5px); /* Efeito de elevação */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
-}
-
-/* Animação de Pulo */
 @keyframes bounce {
     0%, 100% {
         transform: translateY(0);
@@ -177,28 +174,19 @@ footer {
     padding: 1rem 0;
 }
 
-/* Listas */
-ul, ol {
-    display: inline-block;
-    text-align: left;
-}
-
-/* Responsividade: Telas Menores */
+/* Responsividade */
 @media (max-width: 768px) {
-    header {
-        flex-direction: column; /* Empilha os elementos */
-        align-items: center;
-        text-align: center;
+    #unique-header {
+        flex-direction: column;
+        padding: 1rem;
+        height: auto;
     }
 
-    .center-nav {
-        flex-direction: column; /* Empilha os links */
-        gap: 1rem; /* Reduz o espaçamento */
-        margin-top: 1rem;
+    .floating-nav {
+        gap: 1rem;
     }
 
-    .language-selector {
-        position: static; /* Coloca no fluxo normal */
-        margin-top: 1rem;
+    .floating-nav a {
+        font-size: 0.8rem;
     }
 }
