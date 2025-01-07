@@ -63,13 +63,22 @@ title.addEventListener("mouseout", () => {
 
 document.querySelector('footer p').innerHTML = `&copy; ${new Date().getFullYear()} Pawly. All Rights Reserved.`;
 
-// JavaScript para ativar a transformação do cabeçalho ao rolar
+// Adiciona classe ao rolar a página
 window.addEventListener("scroll", () => {
-    const header = document.getElementById("dynamic-header");
+    const header = document.getElementById("unique-header");
     if (window.scrollY > 50) {
         header.classList.add("small");
     } else {
         header.classList.remove("small");
     }
 });
+
+// Efeito parallax no background ao mover o mouse
+document.addEventListener("mousemove", (e) => {
+    const header = document.getElementById("unique-header");
+    const x = (e.clientX / window.innerWidth) * 10 - 5; // Movimento horizontal
+    const y = (e.clientY / window.innerHeight) * 10 - 5; // Movimento vertical
+    header.style.backgroundPosition = `${50 + x}% ${50 + y}%`;
+});
+
 
